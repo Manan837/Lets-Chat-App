@@ -15,11 +15,6 @@
   
   document.getElementById("user_name").innerHTML="Welcome " + user_name +"!";
   
-  function clear()
-  {
-    document.getElementById("output").value = "";
-  }
-
   function addRoom()
   {
     room_name=document.getElementById("room_name").value;
