@@ -19,9 +19,9 @@
   {
     room_name=document.getElementById("room_name").value;
     firebase.database().ref("/").child(room_name).update({
-      purpose: "adding Room_name"
+      purpose: "adding room name"
     });
-    localStorage.setItem("room_name",room_name);
+    localStorage.setItem("room_name", room_name);
     window.location="letschat_page.html";
   }
   

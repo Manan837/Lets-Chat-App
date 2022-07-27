@@ -1,4 +1,5 @@
-const firebaseConfig = {
+const firebaseConfig = 
+{
       apiKey: "AIzaSyB7T6LytooxEm81mHkVjNNTK8fM0nqLuAM",
       authDomain: "lets-chat-ebdc5.firebaseapp.com",
       databaseURL: "https://lets-chat-ebdc5-default-rtdb.firebaseio.com",
@@ -6,13 +7,12 @@ const firebaseConfig = {
       storageBucket: "lets-chat-ebdc5.appspot.com",
       messagingSenderId: "27300117266",
       appId: "1:27300117266:web:804d634432e99b4de9d1cb"
-    };
-  
-  
-     firebase.initializeApp(firebaseConfig);
+};
+    
+firebase.initializeApp(firebaseConfig);
   
 user_name = localStorage.getItem("user_name");
-user_room = localStorage.getItem("user_room");
+room_name = localStorage.getItem("room_name");
 
 function back()
 {
@@ -24,13 +24,13 @@ function send()
       msg = document.getElementById("msg").value;
 
       firebase.database().ref(room_name).push({
-            name: user_name,
-            like: 0,
-            message: msg
+            name:user_name,
+            message:msg,
+            like:0
       });
-
       document.getElementById("msg").value = "";
 }
+
 
 function getData() 
 {
